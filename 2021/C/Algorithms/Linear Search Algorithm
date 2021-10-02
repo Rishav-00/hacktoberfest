@@ -1,11 +1,26 @@
+#include<stdio.h>
 
-Linear_Search ( Array X, Value i)
+int main()
+{
+int a[20],i,x,n;
+printf("How many elements?");
+scanf("%d",&n);
 
-Step1: Set j to 1
-Step2: If j > n, jump to step 7
-Step3: If X[j] == i, jump to step 6
-Step4: Then, increment j by 1 i.e. j = j+1
-Step5: Go back to step 2
-Step6: Display the element i which is found at particular index i, then jump to step 8
-Step7: Display element not found in the set of input elements.
-Step8: Exit/End
+printf("Enter array elements:n");
+for(i=0;i<n;++i)
+scanf("%d",&a[i]);
+
+printf("nEnter element to search:");
+scanf("%d",&x);
+
+for(i=0;i<n;++i)
+if(a[i]==x)
+break;
+
+if(i<n)
+printf("Element found at index %d",i);
+else
+printf("Element not found");
+
+return 0;
+}
